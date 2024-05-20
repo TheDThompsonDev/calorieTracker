@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calorie Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark-theme">
+  <div class="container">
+    <div class="heading">
+      <h2>Calorie Tracker</h2>
+      <button id="openModalBtn">Add Food</button>
+    </div>
+
+
+    <div id="myModal" class="modal">
+
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="input-section">
+          <input type="text" id="food-item" placeholder="Food Item">
+          <input type="number" id="calorie-count" placeholder="Calories">
+          <button onclick="addCalories()">Add</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="display-section">
+      <div class="progress-bar-container">
+        <p>Daily Calorie Goal: <span id="daily-goal">2000</span></p>
+        <svg width="200" height="200" class="progress-bar">
+          <circle r="90" cx="100" cy="100" fill="transparent" stroke-width="10" stroke="#f8f8f8"></circle>
+          <circle id="progress" r="90" cx="100" cy="100" fill="transparent" stroke-width="10" stroke="#00aaff"
+            stroke-dasharray="0 565.48" stroke-dashoffset="565.48"></circle>
+        </svg>
+
+      </div>
+      <table id="calorie-table">
+        <thead>
+          <tr>
+            <th>Food Item</th>
+            <th>Calories</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="display-calories-section">
+        <ul id="calorie-list"></ul>
+        <div>Total Calories: <span id="total-calories">0</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
